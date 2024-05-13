@@ -6,6 +6,8 @@ import CustomComponent from './customComponent';
 import Laptops from './Laptops';
 import Slider from './Slider';
 import { useState } from 'react';
+import UserInput from './UserInput';
+import RestApiCall from './RestApiCall';
 
 function App() {
   let flag=true;
@@ -24,6 +26,8 @@ function App() {
       {/* {flag ? <Heading title= "Learn React from Official site" /> : <CustomComponent />} */}
       {/* <Laptops /> */}
       {/* <Slider minValue={0} maxValue={5}/> */}
+      <RestApiCall />
+      <UserInput />
       {visible ? <Slider minValue={0} maxValue={5}/> : <div>Post Hidden</div>}
       <button onClick={()=>{setVisible(!visible)}}>{buttonDisplayText}</button>
       <Counter starterValue={35}/>
